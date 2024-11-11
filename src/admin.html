@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Discovery Trail</title>
+  <link href="../dist/styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 h-full">
+  <!-- Header -->
+  <header class="bg-gray-200 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <nav class="text-blue-600 text-sm font-semibold">
+        <a href="#" class="hover:text-blue-800">Discovery Trail</a> / 
+        <a href="#" class="hover:text-blue-800">Admin</a> / 
+        <a href="#" class="hover:text-blue-800">Beginning</a>
+      </nav>
+      <div class="space-x-4">
+        <a href="#" class="text-blue-600 hover:text-blue-800">User support</a>
+        <a href="#" class="text-blue-600 hover:text-blue-800">Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto py-8 px-4 lg:px-8 space-y-8">
+    <!-- Section Wrapper for Pick Activity and Admin, displayed side-by-side on larger screens -->
+    <div class="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
+      <!-- Pick Activity Section -->
+      <section class="bg-white shadow rounded-lg p-6 flex-1">
+        <h2 class="text-lg font-bold text-gray-700 border-b pb-2 mb-4">Pick Activity</h2>
+        <div class="space-y-4">
+          <button class="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Create New Track</button>
+          <button class="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Choose Track</button>
+          <button class="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Avastusrada AI</button>
+        </div>
+      </section>
+
+      <!-- Admin Section -->
+      <section class="bg-white shadow rounded-lg p-6 flex-1">
+        <h2 class="text-lg font-bold text-gray-700 border-b pb-2 mb-4">Admin</h2>
+        <div class="space-y-4">
+          <button class="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">User</button>
+          <button class="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Organisations</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Join the Game Section -->
+    <section class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-lg font-bold text-gray-700 border-b pb-2 mb-4">Join the Game</h2>
+      <div class="flex space-x-2">
+        <input type="text" placeholder="Code" class="flex-grow border rounded-md p-2 shadow-sm focus:outline-none focus:ring focus:border-blue-300">
+        <button class="px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600">Join</button>
+      </div>
+    </section>
+
+    <!-- Active Games Section -->
+    <section class="bg-white shadow rounded-lg p-6">
+      <h2 class="text-lg font-bold text-gray-700 border-b pb-2 mb-4">Active Games</h2>
+      <p class="text-gray-500">Nothing found</p>
+    </section>
+  </main>
+</body>
+</html>
