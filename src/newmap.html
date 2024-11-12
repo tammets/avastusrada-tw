@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Track - Discovery Trail</title>
+  <link href="../dist/styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 h-full">
+  <!-- Header -->
+  <header class="bg-gray-200 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <nav class="text-blue-600 text-sm font-semibold">
+        <a href="#" class="hover:text-blue-800">Discovery Trail</a> / 
+        <a href="#" class="hover:text-blue-800">Admin</a> / 
+        <a href="#" class="hover:text-blue-800">New Track</a>
+      </nav>
+      <div class="space-x-4">
+        <a href="#" class="text-blue-600 hover:text-blue-800">User support</a>
+        <a href="#" class="text-blue-600 hover:text-blue-800">Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto py-8 px-4 lg:px-8">
+    <form class="space-y-12">
+      <!-- Track Details Section -->
+      <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
+        <div>
+          <h2 class="text-base font-semibold text-gray-900">Track Details</h2>
+          <p class="mt-1 text-sm text-gray-600">Provide details for the new track.</p>
+        </div>
+
+        <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
+          <div class="sm:col-span-4">
+            <label for="name" class="block text-sm font-medium text-gray-900">Name</label>
+            <input type="text" id="name" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-primary sm:text-sm" placeholder="Enter track name">
+            <p class="mt-1 text-sm text-gray-600">Explanation text about the "Name" field.</p>
+          </div>
+
+          <div class="sm:col-span-4">
+            <label for="organisation" class="block text-sm font-medium text-gray-900">Organisation</label>
+            <select id="organisation" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-primary sm:text-sm">
+              <option>Select organisation</option>
+            </select>
+            <p class="mt-1 text-sm text-gray-600">Explanation text about the "Organisation" field.</p>
+          </div>
+
+          <div class="sm:col-span-4">
+            <label for="target-group" class="block text-sm font-medium text-gray-900">Target Group</label>
+            <select id="target-group" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-primary sm:text-sm">
+              <option>Select target group</option>
+            </select>
+            <p class="mt-1 text-sm text-gray-600">Explanation text about the "Target Group" field.</p>
+          </div>
+
+          <div class="col-span-full">
+            <label for="extra-info" class="block text-sm font-medium text-gray-900">Extra Information</label>
+            <textarea id="extra-info" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-primary sm:text-sm" rows="3" placeholder="Add extra information here"></textarea>
+            <p class="mt-1 text-sm text-gray-600">Explanation text about the "Extra Information" field.</p>
+          </div>
+
+          <div class="col-span-full">
+            <label for="contact" class="block text-sm font-medium text-gray-900">Contact</label>
+            <textarea id="contact" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-primary sm:text-sm" rows="3" placeholder="Contact information"></textarea>
+            <p class="mt-1 text-sm text-gray-600">Explanation text about the "Contact" field.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Section -->
+      <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
+        <div>
+          <h2 class="text-base font-semibold text-gray-900">Settings</h2>
+          <p class="mt-1 text-sm text-gray-600">Configure settings for the track.</p>
+        </div>
+
+        <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
+          <div class="sm:col-span-4">
+            <label for="language" class="block text-sm font-medium text-gray-900">Language</label>
+            <select id="language" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-primary sm:text-sm">
+              <option>en</option>
+            </select>
+            <p class="mt-1 text-sm text-gray-600">Explanation text about the "Language" field.</p>
+          </div>
+
+          <div class="sm:col-span-4">
+            <label for="game-type" class="block text-sm font-medium text-gray-900">Game Type</label>
+            <select id="game-type" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-primary sm:text-sm">
+              <option>Discovery Trail</option>
+            </select>
+            <p class="mt-1 text-sm text-gray-600">Explanation text about the "Game Type" field.</p>
+          </div>
+
+          <div class="sm:col-span-4">
+            <label for="access" class="block text-sm font-medium text-gray-900">Access</label>
+            <select id="access" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-primary sm:text-sm">
+              <option>Hidden</option>
+            </select>
+            <p class="mt-1 text-sm text-gray-600">Explanation text about the "Access" field.</p>
+          </div>
+
+          <div class="sm:col-span-4">
+            <label for="radius" class="block text-sm font-medium text-gray-900">Radius</label>
+            <input type="number" id="radius" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-primary sm:text-sm" placeholder="25">
+            <p class="mt-1 text-sm text-gray-600">Explanation text about the "Radius" field.</p>
+          </div>
+
+          <div class="sm:col-span-4">
+            <label for="track-time" class="block text-sm font-medium text-gray-900">Track Time During the Game</label>
+            <select id="track-time" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-primary sm:text-sm">
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+            <p class="mt-1 text-sm text-gray-600">Explanation text about the "Track Time During the Game" field.</p>
+          </div>
+
+          <div class="sm:col-span-4">
+            <label for="send-results" class="block text-sm font-medium text-gray-900">Send Results to Email</label>
+            <select id="send-results" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-primary sm:text-sm">
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+            <p class="mt-1 text-sm text-gray-600">Explanation text about the "Send Results to Email" field.</p>
+          </div>
+
+          <div class="sm:col-span-4">
+            <label for="map-engine" class="block text-sm font-medium text-gray-900">Map Engine</label>
+            <select id="map-engine" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-primary sm:text-sm">
+              <option>Google Maps</option>
+              <option>OpenStreetMap</option>
+            </select>
+            <p class="mt-1 text-sm text-gray-600">Explanation text about the "Map Engine" field.</p>
+          </div>
+
+          <div class="sm:col-span-4">
+            <label for="category" class="block text-sm font-medium text-gray-900">Category</label>
+            <select id="category" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-primary sm:text-sm">
+              <option>School Education</option>
+              <option>Environmental Education</option>
+              <option>Recreational</option>
+            </select>
+            <p class="mt-1 text-sm text-gray-600">Explanation text about the "Category" field.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Help Section -->
+      <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
+        <div>
+          <h2 class="text-base font-semibold text-gray-900">AI Help</h2>
+          <p class="mt-1 text-sm text-gray-600">Provide additional information or notes for AI assistance.</p>
+        </div>
+
+        <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
+          <div class="col-span-full">
+            <label for="ai-help" class="block text-sm font-medium text-gray-900">AI Help</label>
+            <textarea id="ai-help" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-primary sm:text-sm" rows="3" placeholder="Enter any additional information or instructions"></textarea>
+            <p class="mt-1 text-sm text-gray-600">Explanation text about the "AI Help" field.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Actions -->
+      <div class="mt-6 flex items-center justify-end gap-x-6">
+        <button type="button" class="text-sm font-semibold text-gray-900">Cancel</button>
+        <button type="submit" class="rounded-md bg-primary px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Save</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
