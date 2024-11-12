@@ -107,23 +107,27 @@
             <p class="mt-1 text-sm text-gray-600">Explanation text about the "Radius" field.</p>
           </div>
 
-          <div class="sm:col-span-4">
-            <label for="track-time" class="block text-sm font-medium text-gray-900">Track Time During the Game</label>
-            <select id="track-time" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-primary sm:text-sm">
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-            <p class="mt-1 text-sm text-gray-600">Explanation text about the "Track Time During the Game" field.</p>
-          </div>
-
-          <div class="sm:col-span-4">
-            <label for="send-results" class="block text-sm font-medium text-gray-900">Send Results to Email</label>
-            <select id="send-results" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-primary sm:text-sm">
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-            <p class="mt-1 text-sm text-gray-600">Explanation text about the "Send Results to Email" field.</p>
-          </div>
+<!-- Track Time Toggle -->
+<div class="flex items-center justify-between sm:col-span-4">
+    <span class="flex grow flex-col">
+      <span class="text-sm font-medium text-gray-900" id="track-time-label">Track Time During the Game</span>
+      <span class="text-sm text-gray-500" id="track-time-description">Enable to track time during the game.</span>
+    </span>
+    <button type="button" class="relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 bg-gray-200" role="switch" aria-checked="false" aria-labelledby="track-time-label" aria-describedby="track-time-description">
+      <span aria-hidden="true" class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out translate-x-0"></span>
+    </button>
+  </div>
+  
+  <!-- Send Results to Email Toggle -->
+  <div class="flex items-center justify-between sm:col-span-4">
+    <span class="flex grow flex-col">
+      <span class="text-sm font-medium text-gray-900" id="send-results-label">Send Results to Email</span>
+      <span class="text-sm text-gray-500" id="send-results-description">Enable to automatically send results to email.</span>
+    </span>
+    <button type="button" class="relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 bg-gray-200" role="switch" aria-checked="false" aria-labelledby="send-results-label" aria-describedby="send-results-description">
+      <span aria-hidden="true" class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out translate-x-0"></span>
+    </button>
+  </div>
 
           <div class="sm:col-span-4">
             <label for="map-engine" class="block text-sm font-medium text-gray-900">Map Engine</label>
@@ -169,5 +173,25 @@
       </div>
     </form>
   </main>
+
+  <script>
+    document.querySelectorAll('[role="switch"]').forEach(button => {
+      button.addEventListener('click', () => {
+        const isChecked = button.getAttribute('aria-checked') === 'true';
+        button.setAttribute('aria-checked', !isChecked);
+  
+        const toggle = button.querySelector('span');
+  
+        // Toggle between enabled and disabled colors
+        button.classList.toggle('bg-primary', !isChecked);
+        button.classList.toggle('bg-gray-200', isChecked);
+  
+        // Toggle between translate-x-0 and translate-x-5
+        toggle.classList.toggle('translate-x-0', isChecked);
+        toggle.classList.toggle('translate-x-5', !isChecked);
+      });
+    });
+  </script>
+
 </body>
 </html>
