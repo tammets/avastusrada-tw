@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maps List - Discovery Trail</title>
+  <link href="../dist/styles.css" rel="stylesheet">
+
+</head>
+<body class="bg-gray-100 h-full">
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="flex items-center justify-between border-b border-gray-200 bg-white py-3" aria-label="Breadcrumb">
+    <ol role="list" class="flex w-full max-w-screen-xl mx-auto space-x-4 px-4 sm:px-6 lg:px-8 flex-grow">
+      <li class="flex">
+        <div class="flex items-center">
+          <a href="#" class="text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a 1 1 0 0 1-1 1h-2a 1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z" clip-rule="evenodd" />
+            </svg>
+            <span class="sr-only">Home</span>
+          </a>
+        </div>
+      </li>
+      <li class="flex">
+        <div class="flex items-center">
+          <svg class="h-full w-6 shrink-0 text-gray-200" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" aria-hidden="true">
+            <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+          </svg>
+          <a href="admin.html" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Dashboard</a>
+        </div>
+      </li>
+      <li class="flex">
+        <div class="flex items-center">
+          <svg class="h-full w-6 shrink-0 text-gray-200" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" aria-hidden="true">
+            <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+          </svg>
+          <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700" aria-current="page">Maps List</a>
+        </div>
+      </li>
+    </ol>
+    <div class="flex space-x-4 px-4 sm:px-6 lg:px-8">
+      <a href="#" class="text-sm font-medium text-gray-500 hover:text-gray-700 whitespace-nowrap">User Support</a>
+      <a href="#" class="text-sm font-medium text-gray-500 hover:text-gray-700 whitespace-nowrap">Logout</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto py-8 px-4 sm:px-6 lg:px-8">
+    <!-- Filters and Search -->
+    <div class="flex items-center justify-between mb-4">
+      <div class="flex items-center space-x-2">
+        <label for="my-maps" class="text-sm font-medium text-gray-700">Display only my maps</label>
+        <button type="button" class="relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 bg-gray-200" role="switch" aria-checked="false" aria-labelledby="track-time-label" aria-describedby="track-time-description">
+            <span aria-hidden="true" class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out translate-x-0"></span>
+          </button>
+      </div>
+      <div class="flex space-x-4">
+        <select id="organization" name="organization" class="block w-full max-w-xs rounded-md border-gray-300 shadow-sm focus:ring-primary focus:border-primary sm:text-sm">
+          <option>All Organizations</option>
+          <option>Kuusalu Keskkool</option>
+          <option>Tallinna Ülikool</option>
+          <option>Mingi pikanimega loodushariduskeskus</option>
+          <option>Veel üks pika nimega keskkool</option>
+          <option>Sipsiku lasteaed</option>
+        </select>
+        <input type="search" id="search" name="search" placeholder="Search maps" class="block w-full max-w-xs rounded-md border-gray-300 shadow-sm focus:ring-primary focus:border-primary sm:text-sm">
+        <button type="submit" class="rounded-md bg-primary px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Search</button>
+      </div>
+    </div>
+
+    <!-- Maps List -->
+    <ul role="list" class="divide-y divide-gray-100">
+      <!-- Example List Item -->
+      <li class="flex items-center justify-between gap-x-6 py-5">
+        <div class="min-w-0">
+          <div class="flex items-start gap-x-3">
+            <a href="#" class="text-sm font-semibold text-primary hover:underline">Tondiraba park</a>
+          </div>
+          <div class="mt-1 flex items-center gap-x-2 text-xs text-gray-500">
+            <p>Created on <time datetime="2024-01-01">07.11.2024</time></p>
+            <svg viewBox="0 0 2 2" class="h-0.5 w-0.5 fill-current">
+              <circle cx="1" cy="1" r="1" />
+            </svg>
+            <p>Oksana Voltškova</p>
+            <svg viewBox="0 0 2 2" class="h-0.5 w-0.5 fill-current">
+                <circle cx="1" cy="1" r="1" />
+              </svg>
+              <p>Tallinna Linnamäe Vene Lütseum</p>
+          </div>
+        </div>
+        <div class="relative flex-none">
+            <button type="button" class="-m-2.5 block p-2.5 text-gray-500 hover:text-gray-900" id="menu-toggle" aria-haspopup="true">
+              <span class="sr-only">Open options</span>
+              <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM10 8.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM11.5 15.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+              </svg>
+            </button>
+            <div id="dropdown-menu" class="absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none hidden" role="menu">
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Copy</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Play</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Demo</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Edit</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Results</a>
+              <a href="#" class="block px-3 py-1 text-sm text-red-600" role="menuitem">Delete</a>
+            </div>
+          </div>
+      </li>
+      <!-- Repeat for 10 items -->
+      <li class="flex items-center justify-between gap-x-6 py-5">
+        <div class="min-w-0">
+          <div class="flex items-start gap-x-3">
+            <a href="#" class="text-sm font-semibold text-primary hover:underline">Tondiraba park</a>
+            <p class="mt-0.5 whitespace-nowrap rounded-md bg-yellow-50 px-1.5 py-0.5 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Hidden</p>
+          </div>
+          <div class="mt-1 flex items-center gap-x-2 text-xs text-gray-500">
+            <p>Created on <time datetime="2024-01-01">Jan 1, 2024</time></p>
+            <svg viewBox="0 0 2 2" class="h-0.5 w-0.5 fill-current">
+              <circle cx="1" cy="1" r="1" />
+            </svg>
+            <p>Organization Name</p>
+          </div>
+        </div>
+        <div class="relative flex-none">
+            <button type="button" class="-m-2.5 block p-2.5 text-gray-500 hover:text-gray-900" id="menu-toggle" aria-haspopup="true">
+              <span class="sr-only">Open options</span>
+              <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM10 8.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM11.5 15.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+              </svg>
+            </button>
+            <div id="dropdown-menu" class="absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none hidden" role="menu">
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Copy</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Play</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Demo</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Edit</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Results</a>
+              <a href="#" class="block px-3 py-1 text-sm text-red-600" role="menuitem">Delete</a>
+            </div>
+          </div>
+      </li>
+      <li class="flex items-center justify-between gap-x-6 py-5">
+        <div class="min-w-0">
+          <div class="flex items-start gap-x-3">
+            <a href="#" class="text-sm font-semibold text-primary hover:underline">Tondiraba park</a>
+          </div>
+          <div class="mt-1 flex items-center gap-x-2 text-xs text-gray-500">
+            <p>Created on <time datetime="2024-01-01">Jan 1, 2024</time></p>
+            <svg viewBox="0 0 2 2" class="h-0.5 w-0.5 fill-current">
+              <circle cx="1" cy="1" r="1" />
+            </svg>
+            <p>Organization Name</p>
+          </div>
+        </div>
+        <div class="relative flex-none">
+            <button type="button" class="-m-2.5 block p-2.5 text-gray-500 hover:text-gray-900" id="menu-toggle" aria-haspopup="true">
+              <span class="sr-only">Open options</span>
+              <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM10 8.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM11.5 15.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+              </svg>
+            </button>
+            <div id="dropdown-menu" class="absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none hidden" role="menu">
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Copy</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Play</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Demo</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Edit</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Results</a>
+              <a href="#" class="block px-3 py-1 text-sm text-red-600" role="menuitem">Delete</a>
+            </div>
+          </div>
+      </li>
+      <li class="flex items-center justify-between gap-x-6 py-5">
+        <div class="min-w-0">
+          <div class="flex items-start gap-x-3">
+            <a href="#" class="text-sm font-semibold text-primary hover:underline">Tondiraba park</a>
+            <p class="mt-0.5 whitespace-nowrap rounded-md bg-yellow-50 px-1.5 py-0.5 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Hidden</p>
+          </div>
+          <div class="mt-1 flex items-center gap-x-2 text-xs text-gray-500">
+            <p>Created on <time datetime="2024-01-01">Jan 1, 2024</time></p>
+            <svg viewBox="0 0 2 2" class="h-0.5 w-0.5 fill-current">
+              <circle cx="1" cy="1" r="1" />
+            </svg>
+            <p>Organization Name</p>
+          </div>
+        </div>
+        <div class="relative flex-none">
+            <button type="button" class="-m-2.5 block p-2.5 text-gray-500 hover:text-gray-900" id="menu-toggle" aria-haspopup="true">
+              <span class="sr-only">Open options</span>
+              <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM10 8.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM11.5 15.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+              </svg>
+            </button>
+            <div id="dropdown-menu" class="absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none hidden" role="menu">
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Copy</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Play</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Demo</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Edit</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Results</a>
+              <a href="#" class="block px-3 py-1 text-sm text-red-600" role="menuitem">Delete</a>
+            </div>
+          </div>
+      </li>
+      <li class="flex items-center justify-between gap-x-6 py-5">
+        <div class="min-w-0">
+          <div class="flex items-start gap-x-3">
+            <a href="#" class="text-sm font-semibold text-primary hover:underline">Tondiraba park</a>
+            <p class="mt-0.5 whitespace-nowrap rounded-md bg-yellow-50 px-1.5 py-0.5 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Hidden</p>
+          </div>
+          <div class="mt-1 flex items-center gap-x-2 text-xs text-gray-500">
+            <p>Created on <time datetime="2024-01-01">Jan 1, 2024</time></p>
+            <svg viewBox="0 0 2 2" class="h-0.5 w-0.5 fill-current">
+              <circle cx="1" cy="1" r="1" />
+            </svg>
+            <p>Organization Name</p>
+          </div>
+        </div>
+        <div class="relative flex-none">
+            <button type="button" class="-m-2.5 block p-2.5 text-gray-500 hover:text-gray-900" id="menu-toggle" aria-haspopup="true">
+              <span class="sr-only">Open options</span>
+              <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM10 8.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM11.5 15.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+              </svg>
+            </button>
+            <div id="dropdown-menu" class="absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none hidden" role="menu">
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Copy</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Play</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Demo</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Edit</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Results</a>
+              <a href="#" class="block px-3 py-1 text-sm text-red-600" role="menuitem">Delete</a>
+            </div>
+          </div>
+      </li>
+      <li class="flex items-center justify-between gap-x-6 py-5">
+        <div class="min-w-0">
+          <div class="flex items-start gap-x-3">
+            <a href="#" class="text-sm font-semibold text-primary hover:underline">Tondiraba park</a>
+          </div>
+          <div class="mt-1 flex items-center gap-x-2 text-xs text-gray-500">
+            <p>Created on <time datetime="2024-01-01">Jan 1, 2024</time></p>
+            <svg viewBox="0 0 2 2" class="h-0.5 w-0.5 fill-current">
+              <circle cx="1" cy="1" r="1" />
+            </svg>
+            <p>Organization Name</p>
+          </div>
+        </div>
+        <div class="relative flex-none">
+            <button type="button" class="-m-2.5 block p-2.5 text-gray-500 hover:text-gray-900" id="menu-toggle" aria-haspopup="true">
+              <span class="sr-only">Open options</span>
+              <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM10 8.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM11.5 15.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+              </svg>
+            </button>
+            <div id="dropdown-menu" class="absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none hidden" role="menu">
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Copy</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Play</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Demo</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Edit</a>
+              <a href="#" class="block px-3 py-1 text-sm text-gray-900" role="menuitem">Results</a>
+              <a href="#" class="block px-3 py-1 text-sm text-red-600" role="menuitem">Delete</a>
+            </div>
+          </div>
+      </li>
+    </ul>
+
+    <!-- Pagination -->
+   <nav class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0">
+  <div class="-mt-px flex w-0 flex-1">
+    <a href="#" class="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+      <svg class="mr-3 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+        <path fill-rule="evenodd" d="M18 10a.75.75 0 0 1-.75.75H4.66l2.1 1.95a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 1 1 1.02 1.1l-2.1 1.95h12.59A.75.75 0 0 1 18 10Z" clip-rule="evenodd" />
+      </svg>
+      Previous
+    </a>
+  </div>
+  <div class="hidden md:-mt-px md:flex">
+    <a href="#" class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">1</a>
+    <!-- Current: "border-indigo-500 text-indigo-600", Default: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" -->
+    <a href="#" class="inline-flex items-center border-t-2 border-indigo-500 px-4 pt-4 text-sm font-medium text-indigo-600" aria-current="page">2</a>
+    <a href="#" class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">3</a>
+    <span class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500">...</span>
+    <a href="#" class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">8</a>
+    <a href="#" class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">9</a>
+    <a href="#" class="inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">10</a>
+  </div>
+  <div class="-mt-px flex w-0 flex-1 justify-end">
+    <a href="#" class="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+      Next
+      <svg class="ml-3 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+        <path fill-rule="evenodd" d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z" clip-rule="evenodd" />
+      </svg>
+    </a>
+  </div>
+</nav>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
