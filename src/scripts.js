@@ -1,23 +1,45 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Script to handle menu toggle
-    const menuButton = document.getElementById("menu-toggle");
-    const menu = document.getElementById("dropdown-menu");
+    const template = document.getElementById("dropdown-menu-template");
+    const buttons = document.querySelectorAll(".menu-toggle-btn");
   
-    if (menuButton && menu) {
-      menuButton.addEventListener("click", (event) => {
-        event.stopPropagation(); // Prevent the event from bubbling up to the document
-        menu.classList.toggle("hidden"); // Toggle the menu visibility
+    let currentOpenMenu = null; // Track the currently open menu
+  
+    buttons.forEach(button => {
+      const menuClone = template.cloneNode(true);
+      menuClone.classList.add("dropdown-menu", "hidden");
+  
+      button.parentElement.appendChild(menuClone);
+  
+      // Toggle visibility on button click
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+  
+        // Close the previous menu if it's different from the current one
+        if (currentOpenMenu && currentOpenMenu !== menuClone) {
+          currentOpenMenu.classList.add("hidden");
+        }
+  
+        // Toggle the current menu's visibility
+        const wasHidden = menuClone.classList.contains("hidden");
+        menuClone.classList.toggle("hidden", !wasHidden);
+  
+        // Update `currentOpenMenu` if the menu is now open
+        currentOpenMenu = wasHidden ? menuClone : null;
       });
   
+      // Close all menus when clicking outside
       document.addEventListener("click", () => {
-        menu.classList.add("hidden"); // Close menu when clicking outside
+        if (currentOpenMenu) {
+          currentOpenMenu.classList.add("hidden");
+          currentOpenMenu = null;
+        }
       });
   
-      // Prevent the menu itself from closing when clicking inside it
-      menu.addEventListener("click", (event) => {
+      // Prevent menu from closing when clicking inside
+      menuClone.addEventListener("click", (event) => {
         event.stopPropagation();
       });
-    }
+    });
   
     // Script to handle toggle switches
     document.querySelectorAll('[role="switch"]').forEach(button => {
