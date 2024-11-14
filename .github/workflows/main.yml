@@ -3,29 +3,28 @@ name: Deploy src folder to GitHub Pages
 on:
   push:
     branches:
-      - main  # or the branch you want to trigger deployment
+      - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Check out code
-        uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v3  # Updated to v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Set up Node
+        uses: actions/setup-node@v3  # Updated to v3
         with:
-          node-version: '16' # Specify your Node.js version
+          node-version: '16'
 
       - name: Install dependencies
-        run: npm install  # Adjust this if you're using another package manager
+        run: npm install
 
       - name: Build project
-        run: npm run build  # Adjust this to your build command
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: src  # Serve only the src folder
+          publish_dir: ./src
